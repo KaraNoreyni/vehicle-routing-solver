@@ -33,7 +33,7 @@ export const mapSlice = createSlice({
                     width: 350 + 'px', 
                     height: 350 + 'px'
                 },
-                    ref: createRef()
+                ref: createRef(),
             };
             state.push(map)
         }

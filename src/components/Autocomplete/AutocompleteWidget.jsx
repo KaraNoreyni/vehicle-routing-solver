@@ -1,10 +1,12 @@
 
 
-import { useEffect, useRef, useState } from 'react';
+import { createRef, useEffect, useRef, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { awaitMatrixAndResolveProblem } from '../../actions';
 import { geocode } from '../../actions/getGeocode';
 import { addJob } from '../../reducer/jobsReducer';
+import {  setMapRoute } from '../../reducer/mapRouteReducer';
+import { setRoutes } from '../../reducer/routeReducer';
  
 Date.prototype.addMinutes = function(minutes) {
   var copiedDate = new Date(this.getTime());
@@ -39,8 +41,6 @@ export const AutocompleteWidget = (props) => {
     const [date, setDate] = useState([new Date(null),new Date(null)]);
     const [state, setState] = useState("");
 
-
-
     const awaitGeocodeAndAddJob = async function () {
       console.log('waiting for geocode');
       setState("Chargement...");
@@ -61,7 +61,7 @@ export const AutocompleteWidget = (props) => {
                       lng: location.lng(),
                     },
                       duration: 300,
-                      times: date,
+                      times: [date]
                   },
                 ],
                 demand: [
@@ -77,12 +77,43 @@ export const AutocompleteWidget = (props) => {
       }
     };
     
+    useEffect(() => {
+      async function resolver() {
+        const solution = await awaitMatrixAndResolveProblem(jobs, fleet)
+        dispatch(setRoutes(JSON.parse(solution)));
+        const routeMaps = JSON.parse(solution).tours.map((route) => {
+          return {
+            id: 1, 
+            center: {
+                lat: 45.7756392,
+                lng: 4.8037335,
+            },
+            zoom: 12,
+            style: {
+                width: 350 + 'px', 
+                height: 350 + 'px'
+            },
+            route: route,
+            ref: createRef(),
+          }
+        })
+        dispatch(setMapRoute(routeMaps))
+        return JSON.parse(solution) 
+      };
+      if (jobs.length > 1) { 
+        try {
+          resolver()
+        } catch (error) {
+          console.log(error)
+        }
+      }
+    },[jobs, fleet])
 
 
     return (<form action="" onSubmit={ (e) =>{ e.preventDefault();  awaitGeocodeAndAddJob()}}>
       <ul>
       {jobs.map((job) => {
-       return <li>
+       return <li key={job.id}>
             {job.id}
             <ul>
                 <li>{"latitude : "} {job.deliveries[0].places[0].location.lat}</li>
@@ -99,10 +130,7 @@ export const AutocompleteWidget = (props) => {
         setDate([start.toISOString(), end.toISOString()])
         }}/>
       <button>x</button>
-      <button onClick={(e) => {
-        e.preventDefault();
-        console.log(awaitMatrixAndResolveProblem(jobs, fleet))
-      }}>Calculer les itiniraire</button>
+      <button onClick={()=>{}}>Calculer les itiniraire</button>
       <p>{ state }</p>
     </form>)
   }

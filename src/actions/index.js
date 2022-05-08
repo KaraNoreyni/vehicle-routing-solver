@@ -28,6 +28,7 @@ export const  awaitMatrixAndResolveProblem = async (jobs, fleet) => {
         },
         fleet: fleet,
     };
+    console.log(Problem)
     return new Promise ((resolve, reject) => {
         try {
             resolve(solve_route(Problem, Matrix))

@@ -14,14 +14,16 @@ export const matrix = function (waypoints) {
         }).send(
         ).then(response => {
             const data = response.body;
-
-            const travelTimes = data.distances.flat()
-            const distances = data.durations.flat()
-
+            console.log(response)
+            const travelTimesFloat = data.durations.flat()
+            const distancesFloat = data.distances.flat()
+            const travelTimesFloor = travelTimesFloat.map((x) => Math.floor(x))
+            const distancesFloor = distancesFloat.map((x) => Math.floor(x))
+            console.log(distancesFloor)
             resolve([{
                 "matrix": "normal_car",
-                "travelTimes": travelTimes,
-                "distances": distances,
+                "travelTimes": travelTimesFloor,
+                "distances": distancesFloor,
             }])
         }).catch(e => reject(e))
     

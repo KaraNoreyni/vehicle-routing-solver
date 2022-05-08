@@ -1,6 +1,6 @@
 import { Status, Wrapper } from "@googlemaps/react-wrapper";
 import logo from './logo.svg';
-import { Map, MapListWithStore } from "./components/mapComponent";
+import { Map, MapListWithStore, MapRouteListWithStore } from "./components/mapComponent";
 import { Provider } from "react-redux";
 import { Store } from "./reducer";
 import { AutocompleteWidget } from "./components/Autocomplete/AutocompleteWidget";
@@ -16,6 +16,7 @@ function App() {
     <Provider store={Store}>
       <MapListWithStore/>
       <AutocompleteWidget/>
+      <MapRouteListWithStore/>
     </Provider>
       
     </Wrapper>

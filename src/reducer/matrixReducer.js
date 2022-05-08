@@ -4,11 +4,11 @@ export const matrixSlice = createSlice({
     name: "matrix",
     initialState: null,
     reducer: {
-        addMatrix: (state, action) => {
+        setMatrix: (state, action) => {
             state = action.payload;
             return state
         }
     }
 })
 
-export const { addMatrix } = matrixSlice.actions
+export const { setMatrix } = matrixSlice.actions
