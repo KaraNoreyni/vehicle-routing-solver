@@ -1,0 +1,9 @@
+@use './tokens/spaces';
+
+.content {
+    display: block;
+    margin-block-end: spaces.$space-stack-s;
+}
+.content:last-child {
+    margin-block-end: 0;
+}

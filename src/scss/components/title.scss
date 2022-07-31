@@ -1,0 +1,6 @@
+@use './tokens/spaces';
+
+.title {
+    display: block;
+    margin-block-end: spaces.$space-stack-xs;
+}

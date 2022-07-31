@@ -1,0 +1,10 @@
+@use './tokens/spaces';
+
+.component {
+    display: inline-block;
+    margin-inline-end: spaces.$space-inline-s;
+    padding: spaces.$space-inset-squish-s;
+}
+.component:last-child {
+    margin-inline-end: 0;
+}

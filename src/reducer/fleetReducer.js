@@ -23,13 +23,13 @@ export const fleetSlice = createSlice({
                 "shifts": [
                     {
                         "start": {
-                            "earliest": "2022-05-05T08:00:00Z",
+                            "earliest": "2022-07-10T09:00:00.000Z",
                             "location": {
                                 "index": 0
                             }
                         },
                         "end": {
-                            "latest": "2022-05-05T18:00:00Z",
+                            "latest": "2022-07-10T19:30:00.000Z",
                             "location": {
                                 "index": 0
                             }
@@ -51,7 +51,26 @@ export const fleetSlice = createSlice({
         addVehicle: (state, action) => {
             state.vehicles.vehicleIds.push(action.payload)
         },
+        setShift: (state, action) => {
+            state.vehicles[0].shifts[0] = action.payload
+            return state
+        },
+        addJobber: (state, action) => {
+            state.vehicles[0].vehicleIds.push(action.payload)
+        },
+        deleteJobber: (state, action) => {
+            state.vehicles[0].vehicleIds = state.vehicles[0].vehicleIds.filter((id) => id !== action.payload)
+            return state
+        },
+        setShiftStartDate: (state, action) => {
+            state.vehicles[0].shifts[0].start.earliest = action.payload;
+            return state
+        },
+        setShiftEndDate: (state, action) => {
+            state.vehicles[0].shifts[0].end.latest = action.payload;
+            return state
+        },
     }
 })
 
-export const { addVehicle } = mapSlice.actions
+export const { addVehicle, setShift, addJobber, deleteJobber, setShiftStartDate, setShiftEndDate } = fleetSlice.actions

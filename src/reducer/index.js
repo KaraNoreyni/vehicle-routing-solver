@@ -1,5 +1,6 @@
 import { configureStore, createSlice } from "@reduxjs/toolkit";
 import { fleetSlice } from "./fleetReducer";
+import { fleetMapSlice } from "./fleetMapReducer";
 import { jobSlice } from "./jobsReducer";
 import { mapSlice } from "./mapReducer";
 import { mapRouteSlice } from "./mapRouteReducer";
@@ -13,6 +14,8 @@ export const Store = configureStore({
         fleet: fleetSlice.reducer,
         matrix: matrixSlice.reducer,
         routes: routesSlice.reducer,
-        mapRoute: mapRouteSlice.reducer, 
-    }}
+        mapRoute: mapRouteSlice.reducer,
+        fleetMap: fleetMapSlice.reducer,  
+    },
+}
 )

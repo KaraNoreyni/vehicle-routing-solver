@@ -11,7 +11,7 @@ export const mapSlice = createSlice({
                 lat: 45.7756392,
                 lng: 4.8037335,
             },
-            zoom: 12,
+            zoom: 25,
             style: {
                 width: 350 + 'px', 
                 height: 350 + 'px'

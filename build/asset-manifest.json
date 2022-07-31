@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/static/css/main.52c34ef8.css",
+    "main.js": "/static/js/main.7b9ce30b.js",
+    "static/js/787.a3eacf81.chunk.js": "/static/js/787.a3eacf81.chunk.js",
+    "static/media/vrp_cli_bg.wasm": "/static/media/vrp_cli_bg.d684d5cc6a36c91090b0.wasm",
+    "static/media/spectrum-icons.svg": "/static/media/spectrum-icons.355e4ee769495066a4a4427c2e778f20.svg",
+    "static/media/spectrum-icons-color.svg": "/static/media/spectrum-icons-color.35a466e86b095e8f4dd0da1b89bbf36e.svg",
+    "static/media/spectrum-css-icons.svg": "/static/media/spectrum-css-icons.fe37d4a7ed0af0ce868235ff7dda42a2.svg",
+    "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/index.html",
+    "main.52c34ef8.css.map": "/static/css/main.52c34ef8.css.map",
+    "main.7b9ce30b.js.map": "/static/js/main.7b9ce30b.js.map",
+    "787.a3eacf81.chunk.js.map": "/static/js/787.a3eacf81.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.52c34ef8.css",
+    "static/js/main.7b9ce30b.js"
+  ]
+}
