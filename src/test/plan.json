@@ -1,0 +1,676 @@
+{
+    "plan": {
+        "jobs": [
+            {
+                "id": "40 rue marietton, 69009 Lyon",
+                "deliveries": [
+                    {
+                        "places": [
+                            {
+                                "location": {
+                                    "index": 0,
+                                    "lat": 45.7756392,
+                                    "lng": 4.8037335
+                                },
+                                "duration": 300,
+                                "times": [
+                                    [
+                                        "2022-05-03T06:30:00.000Z",
+                                        "2022-05-03T23:00:00.000Z"
+                                    ]
+                                ]
+                            }
+                        ],
+                        "demand": [
+                            1
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "51 Chemin des Mouilles, 69130 Ecully",
+                "deliveries": [
+                    {
+                        "places": [
+                            {
+                                "location": {
+                                    "index": 1,
+                                    "lat": 45.7815052,
+                                    "lng": 4.7700205
+                                },
+                                "duration": 300,
+                                "times": [
+                                    [
+                                        "2022-05-03T11:30:00.000Z",
+                                        "2022-05-03T12:00:00.000Z"
+                                    ]
+                                ]
+                            }
+                        ],
+                        "demand": [
+                            1
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "40 Av Guy de Collongue, 69130 Ecully",
+                "deliveries": [
+                    {
+                        "places": [
+                            {
+                                "location": {
+                                    "index": 2,
+                                    "lat": 45.7843284,
+                                    "lng": 4.7659597
+                                },
+                                "duration": 300,
+                                "times": [
+                                    [
+                                        "2022-05-03T11:00:00.000Z",
+                                        "2022-05-03T11:30:00.000Z"
+                                    ]
+                                ]
+                            }
+                        ],
+                        "demand": [
+                            1
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "25 Rte de Paris, 69260 Charbonnieres-les-Bains",
+                "deliveries": [
+                    {
+                        "places": [
+                            {
+                                "location": {
+                                    "index": 3,
+                                    "lat": 45.78793659999999,
+                                    "lng": 4.7465046
+                                },
+                                "duration": 300,
+                                "times": [
+                                    [
+                                        "2022-05-03T11:00:00.000Z",
+                                        "2022-05-03T11:30:00.000Z"
+                                    ]
+                                ]
+                            }
+                        ],
+                        "demand": [
+                            1
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "18 Av du Dr Terver, 69130 Ecully",
+                "deliveries": [
+                    {
+                        "places": [
+                            {
+                                "location": {
+                                    "index": 4,
+                                    "lat": 45.77264419999999,
+                                    "lng": 4.7777642
+                                },
+                                "duration": 300,
+                                "times": [
+                                    [
+                                        "2022-05-03T07:00:00.000Z",
+                                        "2022-05-03T07:30:00.000Z"
+                                    ]
+                                ]
+                            }
+                        ],
+                        "demand": [
+                            1
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "9 Chemin. de la Pomme, 69160 Tassin-la-Demi-Lune",
+                "deliveries": [
+                    {
+                        "places": [
+                            {
+                                "location": {
+                                    "index": 5,
+                                    "lat": 45.76139389999999,
+                                    "lng": 4.78189
+                                },
+                                "duration": 300,
+                                "times": [
+                                    [
+                                        "2022-05-03T11:30:00.000Z",
+                                        "2022-05-03T12:00:00.000Z"
+                                    ]
+                                ]
+                            }
+                        ],
+                        "demand": [
+                            1
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "15 Av de la Constellation, 69160 Tassin-la-Demi-Lune",
+                "deliveries": [
+                    {
+                        "places": [
+                            {
+                                "location": {
+                                    "index": 6,
+                                    "lat": 45.75467099999999,
+                                    "lng": 4.773683999999999
+                                },
+                                "duration": 300,
+                                "times": [
+                                    [
+                                        "2022-05-03T08:30:00.000Z",
+                                        "2022-05-03T09:00:00.000Z"
+                                    ]
+                                ]
+                            }
+                        ],
+                        "demand": [
+                            1
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "68 Rue Joliot Curie, 69005 Lyon",
+                "deliveries": [
+                    {
+                        "places": [
+                            {
+                                "location": {
+                                    "index": 7,
+                                    "lat": 45.754606,
+                                    "lng": 4.787528
+                                },
+                                "duration": 300,
+                                "times": [
+                                    [
+                                        "2022-05-03T09:30:00.000Z",
+                                        "2022-05-03T10:00:00.000Z"
+                                    ]
+                                ]
+                            }
+                        ],
+                        "demand": [
+                            1
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "173 Av Barthelemy Buyer, 69005 Lyon",
+                "deliveries": [
+                    {
+                        "places": [
+                            {
+                                "location": {
+                                    "index": 8,
+                                    "lat": 45.7631915,
+                                    "lng": 4.7927032
+                                },
+                                "duration": 300,
+                                "times": [
+                                    [
+                                        "2022-05-03T11:15:00.000Z",
+                                        "2022-05-03T11:45:00.000Z"
+                                    ]
+                                ]
+                            }
+                        ],
+                        "demand": [
+                            1
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "50 Av Sidoine Apollinaire, 69009 Lyon",
+                "deliveries": [
+                    {
+                        "places": [
+                            {
+                                "location": {
+                                    "index": 9,
+                                    "lat": 45.7708217,
+                                    "lng": 4.7960326
+                                },
+                                "duration": 300,
+                                "times": [
+                                    [
+                                        "2022-05-03T11:30:00.000Z",
+                                        "2022-05-03T12:00:00.000Z"
+                                    ]
+                                ]
+                            }
+                        ],
+                        "demand": [
+                            1
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "2 Rue de la Fraternelle, 69009 Lyon",
+                "deliveries": [
+                    {
+                        "places": [
+                            {
+                                "location": {
+                                    "index": 10,
+                                    "lat": 45.7695563,
+                                    "lng": 4.8031926
+                                },
+                                "duration": 300,
+                                "times": [
+                                    [
+                                        "2022-05-03T08:30:00.000Z",
+                                        "2022-05-03T09:00:00.000Z"
+                                    ]
+                                ]
+                            }
+                        ],
+                        "demand": [
+                            1
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "55 Av Rene Cassin, 69009 Lyon",
+                "deliveries": [
+                    {
+                        "places": [
+                            {
+                                "location": {
+                                    "index": 11,
+                                    "lat": 45.768862,
+                                    "lng": 4.807348999999999
+                                },
+                                "duration": 300,
+                                "times": [
+                                    [
+                                        "2022-05-03T07:30:00.000Z",
+                                        "2022-05-03T08:00:00.000Z"
+                                    ]
+                                ]
+                            }
+                        ],
+                        "demand": [
+                            1
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "25 Rue de la Claire, 69009 Lyon",
+                "deliveries": [
+                    {
+                        "places": [
+                            {
+                                "location": {
+                                    "index": 12,
+                                    "lat": 45.7795694,
+                                    "lng": 4.8056097
+                                },
+                                "duration": 300,
+                                "times": [
+                                    [
+                                        "2022-05-03T07:30:00.000Z",
+                                        "2022-05-03T08:00:00.000Z"
+                                    ]
+                                ]
+                            }
+                        ],
+                        "demand": [
+                            1
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "23 Rue Emile Duport, 69009 Lyon",
+                "deliveries": [
+                    {
+                        "places": [
+                            {
+                                "location": {
+                                    "index": 13,
+                                    "lat": 45.784562,
+                                    "lng": 4.810255199999999
+                                },
+                                "duration": 300,
+                                "times": [
+                                    [
+                                        "2022-05-03T10:15:00.000Z",
+                                        "2022-05-03T10:45:00.000Z"
+                                    ]
+                                ]
+                            }
+                        ],
+                        "demand": [
+                            1
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "49 Rue des Docks, 69009 Lyon",
+                "deliveries": [
+                    {
+                        "places": [
+                            {
+                                "location": {
+                                    "index": 14,
+                                    "lat": 45.7890126,
+                                    "lng": 4.8127957
+                                },
+                                "duration": 300,
+                                "times": [
+                                    [
+                                        "2022-05-03T10:45:00.000Z",
+                                        "2022-05-03T11:15:00.000Z"
+                                    ]
+                                ]
+                            }
+                        ],
+                        "demand": [
+                            1
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "21 Rue de la Mignonne, 69009 Lyon",
+                "deliveries": [
+                    {
+                        "places": [
+                            {
+                                "location": {
+                                    "index": 15,
+                                    "lat": 45.7979882,
+                                    "lng": 4.8274265
+                                },
+                                "duration": 300,
+                                "times": [
+                                    [
+                                        "2022-05-03T09:00:00.000Z",
+                                        "2022-05-03T09:30:00.000Z"
+                                    ]
+                                ]
+                            }
+                        ],
+                        "demand": [
+                            1
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "32 Rue des Docteurs Cordier, 69009 Lyon",
+                "deliveries": [
+                    {
+                        "places": [
+                            {
+                                "location": {
+                                    "index": 16,
+                                    "lat": 45.8017638,
+                                    "lng": 4.8300885
+                                },
+                                "duration": 300,
+                                "times": [
+                                    [
+                                        "2022-05-03T11:45:00.000Z",
+                                        "2022-05-03T12:15:00.000Z"
+                                    ]
+                                ]
+                            }
+                        ],
+                        "demand": [
+                            1
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "7 Av General de Gaulle, 69370 Saint-Didier-au-Mont-d'Or",
+                "deliveries": [
+                    {
+                        "places": [
+                            {
+                                "location": {
+                                    "index": 17,
+                                    "lat": 45.7991677,
+                                    "lng": 4.8070832
+                                },
+                                "duration": 300,
+                                "times": [
+                                    [
+                                        "2022-05-03T11:00:00.000Z",
+                                        "2022-05-03T11:30:00.000Z"
+                                    ]
+                                ]
+                            }
+                        ],
+                        "demand": [
+                            1
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "27 Rue Hector Berlioz, 69009 Lyon",
+                "deliveries": [
+                    {
+                        "places": [
+                            {
+                                "location": {
+                                    "index": 18,
+                                    "lat": 45.8008554,
+                                    "lng": 4.8262323
+                                },
+                                "duration": 300,
+                                "times": [
+                                    [
+                                        "2022-05-03T09:30:00.000Z",
+                                        "2022-05-03T10:00:00.000Z"
+                                    ]
+                                ]
+                            }
+                        ],
+                        "demand": [
+                            1
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "112 Rte de Saint-Fortunat, 69450 Saint-Cyr-au-Mont-d'Or",
+                "deliveries": [
+                    {
+                        "places": [
+                            {
+                                "location": {
+                                    "index": 19,
+                                    "lat": 45.80558720000001,
+                                    "lng": 4.8119948
+                                },
+                                "duration": 300,
+                                "times": [
+                                    [
+                                        "2022-05-03T08:30:00.000Z",
+                                        "2022-05-03T09:00:00.000Z"
+                                    ]
+                                ]
+                            }
+                        ],
+                        "demand": [
+                            1
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "37 Av de Lanessan, 69410 Champagne-au-Mont-d'Or",
+                "deliveries": [
+                    {
+                        "places": [
+                            {
+                                "location": {
+                                    "index": 20,
+                                    "lat": 45.7942627,
+                                    "lng": 4.7932505
+                                },
+                                "duration": 300,
+                                "times": [
+                                    [
+                                        "2022-05-03T08:45:00.000Z",
+                                        "2022-05-03T09:15:00.000Z"
+                                    ]
+                                ]
+                            }
+                        ],
+                        "demand": [
+                            1
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "15 Av General de Gaulle, 69410 Champagne-au-Mont-d'Or",
+                "deliveries": [
+                    {
+                        "places": [
+                            {
+                                "location": {
+                                    "index": 21,
+                                    "lat": 45.8026737,
+                                    "lng": 4.7828095
+                                },
+                                "duration": 300,
+                                "times": [
+                                    [
+                                        "2022-05-03T11:30:00.000Z",
+                                        "2022-05-03T12:00:00.000Z"
+                                    ]
+                                ]
+                            }
+                        ],
+                        "demand": [
+                            1
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "22 Rte de Limonest, 69570 Dardilly",
+                "deliveries": [
+                    {
+                        "places": [
+                            {
+                                "location": {
+                                    "index": 22,
+                                    "lat": 45.8237052,
+                                    "lng": 4.7554892
+                                },
+                                "duration": 300,
+                                "times": [
+                                    [
+                                        "2022-05-03T11:45:00.000Z",
+                                        "2022-05-03T12:15:00.000Z"
+                                    ]
+                                ]
+                            }
+                        ],
+                        "demand": [
+                            1
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "44 Chemin. Jean-Marie Vianney, 69130 Ecully",
+                "deliveries": [
+                    {
+                        "places": [
+                            {
+                                "location": {
+                                    "index": 23,
+                                    "lat": 45.7951522,
+                                    "lng": 4.7695042
+                                },
+                                "duration": 300,
+                                "times": [
+                                    [
+                                        "2022-05-03T08:30:00.000Z",
+                                        "2022-05-03T09:00:00.000Z"
+                                    ]
+                                ]
+                            }
+                        ],
+                        "demand": [
+                            1
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "fleet": {
+        "vehicles": [
+            {
+                "typeId": "vehicle",
+                "vehicleIds": [
+                    "vehicle_0",
+                    "vehicle_1",
+                    "vehicle_2",
+                    "vehicle_3",
+                    "vehicle_4"
+                ],
+                "profile": {
+                    "matrix": "normal_car"
+                },
+                "costs": {
+                    "fixed": 22,
+                    "distance": 0.0002,
+                    "time": 0.004806
+                },
+                "shifts": [
+                    {
+                        "start": {
+                            "earliest": "2022-05-03T08:00:00Z",
+                            "location": {
+                                "index": 0
+                            }
+                        },
+                        "end": {
+                            "latest": "2022-05-03T18:00:00Z",
+                            "location": {
+                              "index": 0
+                            }
+                        }
+                    }
+                ],
+                "capacity": [
+                    5
+                ]
+            }
+        ],
+        "profiles": [
+            {
+                "name": "normal_car"
+            }
+        ]
+    }
+}

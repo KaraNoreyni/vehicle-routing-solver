@@ -1,6 +1,6 @@
 import addressAutofill from './addressAutofill/addressAutocompleteInput';
 import jobTable from './storeConnected/jobTable/component/jobTable';
-import { resolveButton } from './storeToggler/components/setter/resolveButton';
+import { resolveButton, testResolveButton } from './storeToggler/components/setter/resolveButton';
 import { jobRow } from './storeConnected/jobTable/component/jobRow';
 import { mapRoute, mapRouteList } from './storeConnected/routeMap/routeMap';
 import { jobSetter } from './storeToggler/components/setter/jobSetter';
@@ -29,6 +29,8 @@ customElements.define('job-table', jobTable)
 customElements.define('job-row', jobRow, {
     extends: 'tr'})
 customElements.define('resolve-button', resolveButton)
+customElements.define('test-resolve-button', testResolveButton)
+
 
 customElements.define('map-route-list', mapRouteList)
 customElements.define('map-route', mapRoute)

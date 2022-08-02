@@ -48,6 +48,10 @@ export const fleetSlice = createSlice({
         ]
     },
     reducers: {
+        setTestFleet: (state, action) => {
+            state =  action.payload
+            return state
+        },
         addVehicle: (state, action) => {
             state.vehicles.vehicleIds.push(action.payload)
         },
@@ -73,4 +77,4 @@ export const fleetSlice = createSlice({
     }
 })
 
-export const { addVehicle, setShift, addJobber, deleteJobber, setShiftStartDate, setShiftEndDate } = fleetSlice.actions
+export const { setTestFleet, addVehicle, setShift, addJobber, deleteJobber, setShiftStartDate, setShiftEndDate } = fleetSlice.actions

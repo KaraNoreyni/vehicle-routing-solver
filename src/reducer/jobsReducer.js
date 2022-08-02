@@ -80,6 +80,10 @@ export const jobSlice = createSlice({
         }
     ],
     reducers: {
+        setTestJobs: (state, action) => {
+            state = action.payload
+            return state
+        },
         addJob: (state, action) => {
             state.push(action.payload);
         },
@@ -136,4 +140,4 @@ export const jobSlice = createSlice({
     }
 })
 
-export const { addJob, deleteJob, editJob, editJobAddress, editJobSchedule, setRouteOrigin, setRouteOriginstartDates, setRouteOriginendDates } = jobSlice.actions
+export const { setTestJobs, addJob, deleteJob, editJob, editJobAddress, editJobSchedule, setRouteOrigin, setRouteOriginstartDates, setRouteOriginendDates } = jobSlice.actions
