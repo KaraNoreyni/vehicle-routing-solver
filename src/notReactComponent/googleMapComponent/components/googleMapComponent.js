@@ -20,7 +20,7 @@ export class googleMapLoader extends HTMLElement {
             this.Status = Status.LOADING
 
             this.googleMapAPILoader = new Loader({
-                apiKey: "AIzaSyCC-wNU3s8EZpAIP0Rdbp7M1w_9nriMeok",
+                apiKey: "",
                 version: "weekly",
                 libraries: ["places"]
             })

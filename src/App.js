@@ -25,7 +25,7 @@ const render = (status = Status) => {
 function App() {
   return (<div class={'coral--light'}>
 
-    <Wrapper apiKey={"AIzaSyCC-wNU3s8EZpAIP0Rdbp7M1w_9nriMeok"} render={render} libraries={["places"]}>
+    <Wrapper apiKey={""} render={render} libraries={["places"]}>
         <div style={{
           overflow: "hidden",
         }}>
