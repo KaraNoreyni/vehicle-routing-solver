@@ -10,8 +10,9 @@ I am currently working on it
 
 # How it's work ?
  Just clone this repo and npm i in it , 
- test it directly in the console and do :
-  const test = document.createElement('test-resolve-button')
+ add your google map api key, 
+ test it directly in the browser console and do :
+  const test = document.createElement('test-resolve-button');
   document.body.appendChild(test)
  And just click on it and see magic happen
 
