@@ -1,5 +1,6 @@
 import { Store } from "../../../../reducer";
 import { awaitGeocodeAndAddJob } from "../../../../components/fleetComponents/actions/awaitGeocodeAndAddJob";
+import { dateToLocalDateTimeFormat } from "../../../../actions/dateToLocalDateTimeFormat";
 
 export class jobSetter  extends HTMLFormElement{
     constructor () {
@@ -10,7 +11,7 @@ export class jobSetter  extends HTMLFormElement{
 
             const index = Store.getState().jobs.length
             const address = this.addressInput.value
-            const dates = this.dates.map(d => d.toLocalString());
+            const dates = this.dates.map(d => dateToLocalDateTimeFormat(d));
 
             awaitGeocodeAndAddJob(address, dates, index)
         }

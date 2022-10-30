@@ -1,7 +1,7 @@
 import { awaitGeocodeAndEditJob } from "../../../../components/fleetComponents/actions/awaitGeocodeAndEditJob";
 import { Store } from "../../../../reducer";
 import { deleteJob, editAddress } from "../../../../reducer/jobsReducer";
-
+import { dateToLocalDateTimeFormat } from "../../../../actions/dateToLocalDateTimeFormat";
 export class jobRow extends HTMLTableRowElement {
     constructor() {
         super()
@@ -21,11 +21,11 @@ export class jobRow extends HTMLTableRowElement {
         this._job = newJob
         console.log(this._job)
         const schedule = this._job.deliveries[0].places[0].times[0]
-        this.jobInfo = [
-            {'address': this._job.id},
-            {'startDate': schedule[0]},
-            {'endDate': schedule[1]}
-        ]
+        this.jobInfo = {
+            'address': this.job.id,
+            'startDate': schedule[0],
+            'endDate': schedule[1]
+        }
         console.log(this.jobInfo)
         makeJobRow(this)
     }
@@ -36,11 +36,11 @@ export class jobRow extends HTMLTableRowElement {
         this.jobIndex = parseInt(this.getAttribute('jobIndex'))
         this._job = Store.getState().jobs[this.jobIndex]
         const schedule = this.job.deliveries[0].places[0].times[0]
-        this.jobInfo = [
-            {'address': this.job.id},
-            {'startDate': schedule[0]},
-            {'endDate': schedule[1]}
-        ]
+        this.jobInfo = {
+            'address': this.job.id,
+            'startDate': schedule[0],
+            'endDate': schedule[1]
+        }
         makeJobRow(this)
     }
     disconnectedCallback() {
@@ -61,26 +61,27 @@ export class jobRow extends HTMLTableRowElement {
                 )
                 this.confirmButton.textContent = 'V'
                 this.confirmButton.onclick = e => {
-                    const newAddress = !!(this.addressInput.value) ?
+                    const newAddress = this.addressInput.value != 
+                        this.jobInfo.address ?
                             this.addressInput.value : 
-                            this.job.id
+                            this.jobInfo.address
 
-                    const newStartDate = this.startDateInput.value!=
-                        this.jobInfo.startDateValue ?
-                            new Date(this.startDateInput.value) : 
-                            this.jobInfo.startDateValue
+                    const newStartDate = this.startDateInput.value !=
+                        this.jobInfo.startDate ?
+                            this.startDateInput.value : 
+                            this.jobInfo.startDate
 
                     const newEndDate = this.endDateInput.value != 
-                        this.jobInfo.endDateValue ?
-                            new Date(this.endDateInput.value) : 
-                            this.jobInfo.endDateValue
+                        this.jobInfo.endDate ?
+                            this.endDateInput.value : 
+                            this.jobInfo.endDate
 
                     const payload = {
                         jobIndex: this.jobIndex,
                         address: newAddress,
                         schedule: [
-                            newStartDate.toISOString(),
-                            newEndDate.toISOString(),
+                            newStartDate,
+                            newEndDate,
                         ]
                     }
                     awaitGeocodeAndEditJob(payload)
@@ -110,13 +111,15 @@ export class jobRow extends HTMLTableRowElement {
 }
 function makeJobRow(row){
     row.innerHTML = ''
-    row.jobInfo.forEach((attribute, idx) => {
-        const key = Object.keys(row.jobInfo[idx])[0]
-        const value = attribute[key]
+    Object.entries(row.jobInfo).forEach((entrie, idx) => {
+        const key = entrie[0]
+        const value = entrie[1]
         row.setAttribute(key, value)
         row[`${key}Input`] = document.createElement('input')
         if (key != 'address') {
             row[`${key}Input`].setAttribute('type', 'datetime-local')
+            console.log(new Date(value))
+            
             row[`${key}Input`].value = value.slice(0, 16)
         } else {
             row[`${key}Input`].setAttribute('type', 'text')

@@ -1,6 +1,7 @@
 import { Store } from "../../../../reducer";
 
 export function travelMaker(googleMap, mapRoute) {
+  console.log(mapRoute)
     const jobs = Store.getState().jobs
     const route = mapRoute.route
 

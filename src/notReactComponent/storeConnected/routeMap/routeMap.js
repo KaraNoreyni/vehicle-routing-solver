@@ -21,7 +21,7 @@ export class mapRoute extends HTMLElement {
         travelMaker(this.googleMap, this.mapRoute)
     }
     connectedCallback() {
-        Store.subscribe(() => {
+        this.unsubscribe = Store.subscribe(() => {
             if (Store.getState().mapRoute[this.mapIndex] != this.mapRoute) {
                 this.mapRoute = Store.getState().mapRoute[this.mapIndex]
             }
@@ -50,6 +50,9 @@ export class mapRoute extends HTMLElement {
         travelMaker(this.googleMap, this.mapRoute)
         console.log(travelMaker, this.googleMap, this.mapRoute)
         //travelMaker(this.googleMap, this.mapRoute)
+    }
+    disconnectedCallback() {
+        this.unsubscribe()
     }
     
 }

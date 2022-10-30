@@ -141,6 +141,9 @@ dropdown-wrapper[show=""] > dropdown-content {
 dropdown-content {
   position: absolute;
   visibility: hidden;
+  padding: 15px;
+  transform: translate(calc(-100% - 50px));
+  background-color: white;
 }
 
 map-route-list {

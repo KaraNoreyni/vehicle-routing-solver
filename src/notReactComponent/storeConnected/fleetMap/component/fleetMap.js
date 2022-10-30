@@ -20,9 +20,6 @@ export class fleetMap extends HTMLElement {
             Store.getState().jobs) {
               this.jobs = Store.getState().jobs
           }
-          if(Store.getState().mapRoute != this.routes) {
-            setRoutes(Store.getState().mapRoute, this.googleMap)
-          }
         })
     }
     get fleet() {
