@@ -1,57 +1,22 @@
 {
   "name": "react_redux_vrpsolver",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "dependencies": {
-    "@adobe/coral-spectrum": "^4.14.1",
-    "@adobe/spectrum-tokens": "file:spectrum-tokens",
-    "@googlemaps/react-wrapper": "^1.1.32",
-    "@mapbox/mapbox-sdk": "^0.13.3",
-    "@mapbox/search-js-core": "^1.0.0-beta.11",
-    "@mapbox/search-js-web": "^1.0.0-beta.11",
-    "@reduxjs/toolkit": "^1.8.1",
-    "@testing-library/jest-dom": "^5.16.4",
-    "@testing-library/react": "^13.1.1",
-    "@testing-library/user-event": "^13.5.0",
-    "install": "^0.13.0",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
-    "react-redux": "^8.0.1",
-    "react-scripts": "5.0.1",
-    "redux": "^4.2.0",
-    "three": "file:../threejs/three.js-master",
-    "vrp-cli": "file:../../my-app/my-app/vrp/vrp-cli/pkg/vrp-cli-1.16.1.tgz",
-    "web-vitals": "^2.1.4"
+    "@googlemaps/js-api-loader": "^1.15.1",
+    "@mapbox/mapbox-sdk": "^0.14.0",
+    "@mapbox/search-js-web": "^1.0.0-beta.14",
+    "@reduxjs/toolkit": "^1.9.0",
+    "vrp-cli": "file:vrp-cli-1.16.1.tgz"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "npx parcel src/index.html"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "main": "index.js",
+  "main": "components/index.js",
   "repository": "https://nonoXR:bpn5g6Tq8LY6fenUHnGu@bitbucket.org/nonoxr/react_redux_vrpsolver.git",
   "author": "nonoXR <69noreyni.sery@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "json-to-scss": "^1.6.2"
+    "process": "^0.11.10"
   }
 }

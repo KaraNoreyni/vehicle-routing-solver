@@ -2,7 +2,7 @@ import { getMatrix } from "../../../actions/getMatrix"
 import { Store } from "../.."
 import { setMatrix } from "../../matrixReducer"
 
-export const awaitMatrixAndSetMatrix = function(waypoints, matrixName) {
+export const awaitMatrixAndSetMatrix = async function(waypoints, matrixName) {
     const matrix = await getMatrix(waypoints)
     return Store.dispatch(setMatrix(
         formatMatrixForStore(matrix, matrixName)))

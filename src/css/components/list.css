@@ -1,0 +1,17 @@
+ul {
+    margin-inline-start: 0px;
+}
+.list-item  {
+    border-radius: 1px;
+}
+.list-item > :first-child {
+    border-radius: 2px;
+    padding: 8px 4px;
+    align-items: center;
+    border: 0.01em solid rgba(255,255,255,.1);
+    background-color: transparent;
+    transition: all 0.125s ease;
+}
+.list-item:hover > :first-child{
+    background-color: var(--gray-300);
+}

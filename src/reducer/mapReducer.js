@@ -1,7 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
-import { createRef } from "react";
-
-
+import { createSlice } from "@reduxjs/toolkit"
 export const mapSlice = createSlice({
     name: "map",
     initialState: [
@@ -16,7 +13,7 @@ export const mapSlice = createSlice({
                 width: 350 + 'px', 
                 height: 350 + 'px'
             },
-            ref: createRef()
+            ref: null
         },
     ],
     reducers: {
@@ -33,7 +30,7 @@ export const mapSlice = createSlice({
                     width: 350 + 'px', 
                     height: 350 + 'px'
                 },
-                ref: createRef(),
+                ref: null,
             };
             state.push(map)
         }

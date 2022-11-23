@@ -1,0 +1,20 @@
+dropdown-wrapper[show=''] {
+    display: inline-block;
+}
+dropdown-wrapper[show=''] > dropdown-content {
+    visibility: visible;
+}
+dropdown-content {    
+    position: absolute;
+    margin-left: -250px;
+    background-color: var(--gray-75);
+    padding: 10px;
+    border: 1px solid var(--gray-300);
+    border-radius: 8px;
+    visibility: hidden
+}
+.dropdown {
+    max-height: 0px;
+    overflow: hidden;
+    transition: all 0.275s linear;
+}

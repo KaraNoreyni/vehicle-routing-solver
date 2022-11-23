@@ -1,5 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
-
+import { createSlice } from "@reduxjs/toolkit"
 export const matrixSlice = createSlice({
     name: "matrix",
     initialState: null,

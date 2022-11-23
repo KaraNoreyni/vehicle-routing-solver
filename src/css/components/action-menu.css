@@ -1,0 +1,30 @@
+.action-menu {
+    display: flex;
+    flex-direction: column;
+    visibility: hidden;
+    padding: 16px;
+    background-color: var(--gray-75);
+    border: 1px solid var(--gray-500);
+    border-radius: 8px;
+    position: absolute;
+    margin-block-start: -36px;
+    margin-inline-start: 36px;
+}
+.action-menu > label {
+    align-self: flex-start;
+}
+.action-menu > input[type='submit'] {
+    background-color: #1976d2;
+    color: var(--gray-100);
+    border: 1px solid var(--gray-300);
+    border-radius: 16px;
+}
+.action-menu > input {
+    margin-block-end: 4px;
+}
+.action-menu > :last-child {
+    margin-block-end: 0px;
+}
+.action-menu[visible=''] {
+    visibility: visible;
+}

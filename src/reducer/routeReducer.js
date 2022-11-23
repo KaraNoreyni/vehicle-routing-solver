@@ -1,5 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit"
-
 export const routesSlice = createSlice({
     name: "routes",
     initialState: [],

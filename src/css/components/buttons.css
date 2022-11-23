@@ -1,0 +1,53 @@
+button:hover {
+    box-shadow: 0 2px 4px rgb(0 0 0 / 30%);
+}
+button:active {
+    box-shadow: 0 2px 4px rgb(0 0 0 / 15%);
+}
+button, [type="button"], [type="reset"], [type="submit"] {
+    padding: 0.5em 1em;
+    border: 1px solid var(--gray-600);
+    border-radius: 4px;
+    background-color: var(--gray-50);
+}
+.deleteButton {
+    background-color: #d32f2f;
+    color: var(--gray-100);
+    border: 1px solid var(--gray-300);
+    border-radius: 16px;
+}
+.action-button {
+    float: right;
+}
+.action-button.confirm {
+    background-color: #4caf50;
+    color: #004d40;
+    font-weight: bold;
+}
+.action-button.undo {
+    background-color: #f44336;
+    color: #880e4f;
+    font-weight: bold;
+}
+.action-button.delete {
+    background-color: #d32f2f;
+    color: var(--gray-100);
+    border: 1px solid var(--gray-300);
+}
+.action-button.edit {
+    background-color: var(--gray-100);
+    color: var(--gray-900);
+    border: 1px solid var(--gray-500);
+}
+.action-button:hover {
+    box-shadow: 0 2px 4px rgb(0 0 0 / 30%);
+}
+.action-button:active {
+    box-shadow: none;
+}
+.toggleButton {
+    background-color: #1976d2;
+    color: var(--gray-100);
+    border: 1px solid var(--gray-300);
+    border-radius: 16px;
+}

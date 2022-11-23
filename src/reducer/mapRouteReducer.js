@@ -1,7 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
-import { createRef } from "react";
-
-
+import { createSlice } from "@reduxjs/toolkit"
 export const mapRouteSlice = createSlice({
     name: "mapRoute",
     initialState: [

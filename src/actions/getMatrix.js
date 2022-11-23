@@ -1,5 +1,4 @@
-import  mapBoxClient  from '@mapbox/mapbox-sdk/services/matrix'
-
+mapBoxClient = require('../../node_modules/@mapbox/mapbox-sdk/services/matrix.js')
 export const matrix = function (waypoints) {
     // Get matrix coord with mapbox sdk
     // waypoints should be dfined as [[lng,lat],[lng,lat]...]

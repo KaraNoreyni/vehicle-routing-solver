@@ -1,6 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit"
-import { mapSlice } from "./mapReducer"
-
 export const fleetMapSlice = createSlice({
     name: "fleetMap",
     initialState: {},

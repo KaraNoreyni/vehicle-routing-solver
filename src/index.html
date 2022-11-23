@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en" class="full-height">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css">
+    <script defer="defer" type="module" src="./components/index.js"></script>
+    <title>Document</title>
+</head>
+<body class="full-height">
+  <test-google-map-loader class="full-height">
+        <div
+          class='full-height flex column'
+          style="overflow: hidden;">
+          <header class="flex space-b">
+            LOGO
+            <tab-control
+                 for="main-content"
+                 class='flex'>
+                  <tab-label content="maps">maps</tab-label>
+                  <tab-label content="table">table</tab-label>
+                </tab-control>
+            <button 
+              is='action-button'
+              for='nav-content'>Menu</button>
+          </header>
+
+          <div class="flex full-height">
+            <div 
+              style='width:100%'
+              class='full-height'
+              id="main-content">
+              <tab-panel
+                class='full-height' 
+                content="maps" 
+                show="">
+                <fleet-map class='full-height'></fleet-map>
+              </tab-panel>
+              <tab-panel 
+              class='full-height'
+                content="table">
+                <job-table 
+                class="full-height"
+                style="
+                  height: 100%;
+                  overflow-y: scroll;
+                  display: block;"
+            ></job-table>
+              </tab-panel>
+            </div>
+              
+            <section 
+              class='full-height' >
+              <div
+                id="nav-content"
+                class='container full-height'>
+                <tab-control
+                 for="nav-content"
+                 class='flex'>
+                  <tab-label content="jobs">jobs</tab-label>
+                  <tab-label content="addJob">addJob</tab-label>
+                  <tab-label content="fleet">fleet</tab-label>
+                </tab-control>
+                <tab-panel content='jobs'>
+                  <h4 class='title'>Livraisons</h4>
+                  <hr class='hr' />
+                  <job-list 
+                    storeAttributeKeys='jobs,slice 1'
+                    style="display: 'block'">
+
+                  </job-list>
+                </tab-panel>
+                <tab-panel content='addJob'>
+                  <h4 class='title'>Ajouter une livraison</h4>
+                  <hr class='hr' />
+                  <form
+                    is='job-setter'
+                    class='flex column'
+                    id='jobSetter'>
+                    <div
+                      class='content inputContainer'>
+                      <label
+                        htmlFor='jobSetterAddress'
+                      >adresse de livraison</label>
+                      <input
+                        is='autocomplete-input'
+                        name='addressInput'
+                        autocomplete="street-address"
+                        id='jobSetterAddress' />
+                    </div>
+                    <h5
+                      class='title'>Plage horaire</h5>
+                    <div
+                      class='content inputContainer'>
+                      <label
+                        htmlFor='jobSetterScheduleStart'
+                        class='scheduleLabel' >début</label>
+                      <input
+                        name='startDateInput'
+                        id='jobSetterScheduleStart'
+                        class='content'
+                        type='datetime-local' />
+                    </div>
+                    <div
+                      class='content inputContainer'>
+                      <label
+                        htmlFor='jobSetterScheduleEnd'
+                        class='scheduleLabel'>fin</label>
+                      <input
+                        name='endDateInput'
+                        id='jobSetterScheduleEnd'
+                        class='content'
+                        type='datetime-local' />
+                    </div>
+                    <input
+                      type='submit'
+                      value='ajouter'
+                      class='toggleButton' />
+                  </form>
+                </tab-panel>
+                <tab-panel content='fleet'>
+                  <h4 class='title'>DEPOT</h4>
+                  <hr class='hr' />
+                  <ul>
+                    <li class='list-item'>
+                      <div
+                        class='flex space-b'>
+                        <vehicle-number class="component" storeattributekeys="fleet,vehicles,at 0,vehicleIds,length">
+                          <strong>Nombre de vehicule: </strong> 3
+                          </vehicle-number>
+                        <dropdown-wrapper>
+                          <button is='dropdown-button'>...</button>
+                          <dropdown-content class='fill container'>
+                            <ul is='jobbers-list'></ul>
+                          </dropdown-content>
+                        </dropdown-wrapper>
+                        <dropdown-wrapper>
+                          <button is='dropdown-button'>+</button>
+                          <dropdown-content class='fill container'>
+                            <form
+                              is='jobber-add'
+                              id="addJobber"
+                              class='width-maxCont'>
+                              <label
+                                htmlFor="addJobberInput">Ajouter un livreur</label>
+                              <input
+                                type="text"
+                                id="addJobberInput"
+                                name='jobberName' />
+                              <input
+                                type="submit"
+                                value="ajouter" />
+                            </form>
+                          </dropdown-content>
+                        </dropdown-wrapper>
+                      </div>
+                    </li>
+                    <li class='list-item'>
+                      <div class='flex space-b'>
+                        <p class='component'><strong>adresse </strong>
+                          <br />
+                          <origin-address>
+                          </origin-address>
+                        </p>
+                        <dropdown-wrapper>
+                          <button is='dropdown-button'>...</button>
+                          <dropdown-content
+                            class='container fill'>
+                            <form
+                              is='origin-setter'
+                              class='width-maxCont'>
+                              <label
+                                for='shiftAddressInput'>Modifier l'address du dépot</label>
+                              <input
+                                is='autocomplete-input'
+                                name='address'
+                                id='shiftAddressInput'
+                                autocomplete="street-address"/>
+                              <input
+                                type='submit'
+                                value='modifier' />
+                            </form>
+                          </dropdown-content>
+                        </dropdown-wrapper>
+                      </div>
+                    </li>
+                    <li class='list-item'>
+                      <div class='flex space-b'>
+                        <p class='component'><strong>debut </strong>
+                          <br />
+                          <origin-start-date>
+                            ${datesString[0]}
+                          </origin-start-date>
+                        </p>
+                        <dropdown-wrapper>
+                          <button is='dropdown-button'>...</button>
+                          <dropdown-content
+                            class='container fill'>
+                            <form
+                              is='origin-start-date-setter'
+                              class='width-maxCont'>
+                              <label
+                                htmlFor='shiftStartDateInput'>Modifier l'heure de début de shift</label>
+                              <input
+                                name='startDate'
+                                id='shiftStartDateInput'
+                                type='datetime-local' />
+                              <input
+                                type='submit'
+                                value='modifier' />
+                            </form>
+                          </dropdown-content>
+                        </dropdown-wrapper>
+                      </div>
+                    </li>
+                    <li class='list-item'>
+                      <div class='flex space-b'>
+                        <p class='component'><strong>fin </strong>
+                          <br />
+                          <origin-end-date>
+                            ${datesString[1]}
+                          </origin-end-date>
+                        </p>
+                        <dropdown-wrapper>
+                          <button is='dropdown-button'>...</button>
+                          <dropdown-content
+                            class='container fill'>
+                            <form
+                              is='origin-end-date-setter'
+                              class='width-maxCont'>
+                              <label
+                                htmlFor='shiftEndDateInput'>Modifier l'heure de fin de shift</label>
+                              <input
+                                name='endDate'
+                                id='shiftEndDateInput'
+                                type='datetime-local' />
+                              <input
+                                type='submit'
+                                value='modifier' />
+                            </form>
+                          </dropdown-content>
+                        </dropdown-wrapper>
+                      </div>
+                    </li>
+                  </ul>
+                </tab-panel>
+              </div>
+            </section>
+          </div>
+      <map-route-list></map-route-list>
+  </div>
+</test-google-map-loader>
+</body>
+</html>

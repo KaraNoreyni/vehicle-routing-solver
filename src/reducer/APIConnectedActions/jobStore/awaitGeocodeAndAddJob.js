@@ -2,7 +2,7 @@ import { geocode } from "../../../actions/getGeocode";
 import { addJob } from "../../../reducer/jobsReducer";
 import { Store } from "../../../reducer";
 
-export const awaitGeocodeAndAddJob = function (text, date, index) {
+export const awaitGeocodeAndAddJob = async function (text, date, index) {
     const location = await geocode(text);
     const job = {
         id: text,

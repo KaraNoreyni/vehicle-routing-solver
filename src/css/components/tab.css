@@ -1,0 +1,7 @@
+tab-control {
+    position: relative;
+    border-bottom: 3px solid var(--gray-400);
+}
+tab-label {
+    padding: 8px 4px
+}

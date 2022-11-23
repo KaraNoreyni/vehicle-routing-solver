@@ -1,0 +1,51 @@
+job-table > table {
+    width: 100%;
+    border-radius: 8px
+}
+th {
+    padding: .5em 1em;
+    font-weight: bold;
+}
+td {
+    padding: 0.25em .5em;
+    vertical-align: middle;
+    border-bottom: 1px solid var(--gray-400);
+}
+tbody > tr:first-child > td {
+    border-top: 1px solid var(--gray-400);
+}
+tbody > tr > td:first-child {
+    border-left: 1px solid var(--gray-400);
+}
+tbody > tr > td:last-child {
+    border-right: 1px solid var(--gray-400);
+}
+tbody > tr > td:not(:last-child) {
+    border-right: 1px solid var(--gray-400);
+}
+tbody > tr:last-child :first-child {
+    border-bottom-left-radius: 8px;
+}
+tbody > tr:last-child :last-child {
+    border-bottom-right-radius: 8px;
+}
+tr:hover {
+    background-color: rgba(0, 0, 0, .05);
+}
+.td-input {
+    position: relative;
+    padding: 0;
+    width: 31%;
+}
+.td-input > div {
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 0.25em .5em;
+}
+.td-input > div > input {
+    font-size: .75em;
+}

@@ -1,0 +1,9 @@
+.scheduleLabel {
+    display: block;
+    width: max-content;
+    padding: 0 2px;
+    text-align: start;
+    position: relative;
+    top: 0.5em;
+    background-color: var(--gray-75);
+}
