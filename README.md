@@ -10,7 +10,7 @@ I am currently working on it
 
 
 # How it's work ?
- Just clone this repo and npm i in it , 
+ Just clone this repo and npm i in it , then npm start
  add your google map api key, 
  test it directly in the browser console and do :
   const test = document.createElement('test-resolve-button');
