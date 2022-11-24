@@ -30,7 +30,7 @@ export class tabLabel extends HTMLElement {
         this.controler = this.parentElement
         this.panel = this.controler.container.querySelector(
             `tab-panel[content=${this.getAttribute('content')}`)
-        this.onclick = function() {
+        this.addEventListener('click', function() {
             this.controler.labels.filter(
                 label => label.panel.hasAttribute('show')
                 ).forEach(label => label.panel.removeAttribute(
@@ -41,7 +41,7 @@ export class tabLabel extends HTMLElement {
             scaleX(${this.offsetWidth})
             `
             this.panel.setAttribute('show', '')
-        }
+        }) 
     }
 }
 

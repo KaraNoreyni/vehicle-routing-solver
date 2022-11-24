@@ -44,6 +44,12 @@ export class googleMapComponent extends HTMLElement {
         this._googleMap = null
         this.mapOptions =  {
             mapId: "6f988384540e17a4",
+            center: {
+              lat: 45.7756392,
+              lng: 4.8037335
+
+            },
+            zoom: 17, 
             disableDefaultUI: true,
             tilt: 50,
             heading:50,

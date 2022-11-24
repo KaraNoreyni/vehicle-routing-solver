@@ -2,7 +2,7 @@ import { addressAutofill } from './addressAutofill/addressAutocompleteInput';
 import jobTable from './storeConnected/jobTable/component/jobTable';
 import { resolveButton, testResolveButton } from './storeToggler/components/setter/resolveButton';
 import { jobRow } from './storeConnected/jobTable/component/jobRow';
-import { mapRoute, mapRouteList } from './storeConnected/routeMap/routeMap';
+import { mapRoute, mapRouteList, routesWrapper } from './storeConnected/routeMap/routeMap';
 import { jobSetter } from './storeToggler/components/setter/jobSetter';
 import { dropdown, dropdownButton, dropdownContent } from './dropDown';
 import { jobbersList } from './storeConnected/jobbersList';
@@ -82,5 +82,6 @@ customElements.define('job-attribute-component', jobAttributeComponent)
 
 
 /* TEST */
+customElements.define('routes-wrapper', routesWrapper)
 customElements.define('test-google-map-loader', googleMapLoader)
 customElements.define('test-google-map-component', googleMapComponent)

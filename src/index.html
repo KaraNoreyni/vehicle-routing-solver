@@ -20,6 +20,7 @@
                  class='flex'>
                   <tab-label content="maps">maps</tab-label>
                   <tab-label content="table">table</tab-label>
+                  <tab-label content="routes-maps">routes</tab-label>
                 </tab-control>
             <button 
               is='action-button'
@@ -43,11 +44,18 @@
                 <job-table 
                 class="full-height"
                 style="
-                  height: 100%;
                   overflow-y: scroll;
-                  display: block;"
-            ></job-table>
+                  display: block;">
+                </job-table>
               </tab-panel>
+              <tab-panel
+                class="full-height"
+                content="routes-maps">
+                <routes-wrapper 
+                  class="flex column full-height"></routes-wrapper>
+              </tab-panel>
+              
+
             </div>
               
             <section 
@@ -190,7 +198,6 @@
                         <p class='component'><strong>debut </strong>
                           <br />
                           <origin-start-date>
-                            ${datesString[0]}
                           </origin-start-date>
                         </p>
                         <dropdown-wrapper>
@@ -219,7 +226,6 @@
                         <p class='component'><strong>fin </strong>
                           <br />
                           <origin-end-date>
-                            ${datesString[1]}
                           </origin-end-date>
                         </p>
                         <dropdown-wrapper>
@@ -248,7 +254,6 @@
               </div>
             </section>
           </div>
-      <map-route-list></map-route-list>
   </div>
 </test-google-map-loader>
 </body>
